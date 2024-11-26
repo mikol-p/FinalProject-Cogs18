@@ -1,8 +1,8 @@
 import random
 class PasswordList():
-
-    def __init__(self, master_pass):
-        self.master_pass = master_pass
+    '''Class stores passwords in a dictionary to later be accessed''' 
+    
+    def __init__(self):
         self.pass_list = {}
 
     def random_password(self, length):
@@ -43,6 +43,9 @@ class PasswordList():
         return password
     
     def add_password(self):
+        '''Adds password name, username and password to dictionary.
+        If input for password is a number, it generates a random password of that length'''
+        
         #ask for password name, username and password (or generate new password)
         new_pass_name = input('\nWhat would you like to name this password as: ')
         new_pass_username = input('\nWhat is your username for this password: ')
@@ -61,16 +64,22 @@ class PasswordList():
         print(self.pass_list)
 
     def delete_password(self):
+        '''Removes password from dictionary, input must be name of password'''
+        
         password_to_remove = input('\nWhich item would you like to remove? ')
         del(self.pass_list[password_to_remove])
         
     def list_passwords(self):
+        '''lists passwords neatly'''
+        
         print('\nHere are your stored passwords: \n')
         for item in self.pass_list:
             print(str(item) + '\n' + str(self.pass_list[item]))
             print('\n')
 
     def menu(self):
+        '''Opens a menu to interact with the password dictionary easily'''
+        
         not_done = True
         while not_done:
             print('\nWhat would you like to do?')

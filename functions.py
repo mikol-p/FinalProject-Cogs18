@@ -1,4 +1,6 @@
 def display_passwords(pass_list):
+    '''Displays passwords in a neat and organized way'''
+    
     # Count passwords in pass_list
     counter = 0
 
@@ -20,6 +22,8 @@ def display_passwords(pass_list):
 
 
 def encoder(pass_list):
+    '''Encrypts list of passwords'''
+    
     # Initialize variables to keep the decoded and encoded strings of passwords
     decoded = ''
     encoded = ''
@@ -42,6 +46,8 @@ def encoder(pass_list):
 
 
 def decoder(encoded_string):
+    '''Decodes encrypted list of passwords'''
+    
     # Initialize a variable to store decoded string
     decoded = ''
     
